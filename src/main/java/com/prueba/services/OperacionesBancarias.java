@@ -85,7 +85,7 @@ public class OperacionesBancarias implements OperacionesCuenta, OperacionesTitul
 
         String cuentaEncontrada = FileContext.readFile( Path);
 
-        if ( null != cuentaEncontrada || cuentaEncontrada.isEmpty()){
+        if ( null != cuentaEncontrada ){
 
             Type collectionType = new TypeToken<Cuenta>() {}.getType();
             cuenta = GsonSingleton.getInstance().getGson().fromJson( cuentaEncontrada, collectionType);
